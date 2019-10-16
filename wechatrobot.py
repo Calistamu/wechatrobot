@@ -25,18 +25,18 @@ def text_reply(msg):
     # elif not msg['FromUserName'] == myUserName:    
     else:    
         if auto_reply == True:
-            itchat.send_msg(u"[自动回复]您好，我现在有事不在，一会再和您联系。\n", msg['FromUserName'])
+            itchat.send_msg(u"[自动回复]钞钞自闭去了，现在是mudou的自动回复。\n", msg['FromUserName'])
         else:            
             '''
             For none-filehelper message,
             if recieve '= =', start robort replying.
             if recieve 'x x', stop robort replying.
             '''
-            if msg['Content'] == u"= =":
+            if msg['Content'] == u"hello":
                 robort_reply = True
                 peer_list.append(msg['ToUserName'])
                 return
-            elif msg['Content'] == u"x x":
+            elif msg['Content'] == u"byebye":
                 robort_reply = False
                 peer_list.remove(msg['ToUserName'])
                 return
