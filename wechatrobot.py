@@ -16,10 +16,10 @@ def text_reply(msg):
     global auto_reply, robort_reply, peer_list
 
     # The command signal of "[自动回复]"   
-    if msg['FromUserName'] == myUserName and msg['Content'] == u"开启自动回复":
+    if msg['FromUserName'] == myUserName and msg['Content'] == u"start":
         auto_reply = True
         itchat.send_msg(u"[自动回复]已经打开。\n", msg['FromUserName'])
-    elif msg['FromUserName'] == myUserName and msg['Content'] == u"关闭自动回复":
+    elif msg['FromUserName'] == myUserName and msg['Content'] == u"stop":
         auto_reply = False
         itchat.send_msg(u"[自动回复]已经关闭。\n", msg['FromUserName'])
     # elif not msg['FromUserName'] == myUserName:    
