@@ -25,7 +25,7 @@ def text_reply(msg):
     # elif not msg['FromUserName'] == myUserName:    
     else:    
         if auto_reply == True:
-            itchat.send_msg(u"[自动回复]钞钞自闭去了，现在是mudou的自动回复。\n", msg['FromUserName'])
+            itchat.send_msg(u"[自动回复]钞钞在学习，现在是mudou的自动回复。\n", msg['FromUserName'])
         else:            
             '''
             For none-filehelper message,
