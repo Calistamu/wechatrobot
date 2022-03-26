@@ -61,9 +61,9 @@ def text_reply(msg):
 # Main
 if __name__ == '__main__':
     # Set the hot login
-    itchat.auto_login(enableCmdQR=True, hotReload=True)
+    itchat.auto_login(enableCmdQR=2, hotReload=True,desktop=True)
     #若enableCmdQR=True二维码显示不全，enableCmdQR=2终端字符宽度的问题，或者删除此参数同级目录生成图片
-
+    #默认控制台背景色为暗色（黑色），若背景色为浅色（白色），可以将enableCmdQR赋值为负值：
     # Get your own UserName
     myUserName = itchat.get_friends(update=True)[0]["UserName"]
     print (myUserName)
@@ -73,4 +73,4 @@ if __name__ == '__main__':
 
     itchat.run()
     #如果想要二十四小时，需要服务器，阿里云/腾讯云，还没有解决
-    #想要实现图形化，如果能实现不会运行Py的人也能使用就好啦
+    #想要实现图形化，如果能实现不会运行Py的人也能使用就好啦CC
